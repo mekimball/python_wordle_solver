@@ -7,16 +7,16 @@ try:
     for line in f:
       guess_list.append(line.strip())
 except FileNotFoundError:
-  print('file not found')
+  print('File not Found')
 
-print('try roate')
+print('A good starting word is "roate"')
 
 for guesses in range(6):
   guess = input("\nword:").lower()
-  print('g - green, y - yellow, w - wrong / grey')
+  print('add word status, g for green, y for yellow, w for wrong letters. eg: ggywyy')
   feedback = input('Feedback ').lower()
   if feedback == 'gggggg':
-    print("Well Done! Guess", guesses+1)
+    print("Well Done! Guess number", guesses+1)
     break
   temp_tuple = tuple(guess_list)
   for word in temp_tuple:
